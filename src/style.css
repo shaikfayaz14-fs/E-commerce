@@ -1,0 +1,1485 @@
+/* --------------------------navbar styles--------------------------------------- */
+#navbar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: #0F172A;
+    
+}
+#pn
+{
+    color: white;
+}
+#links
+{
+    height: 200px;
+    width: 450px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#search
+{
+    height: 200px;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+#subnav
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    background-color: #1E293B;
+    
+}
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  #links {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  #search {
+    width: 100%;
+  }
+
+  #search input {
+    flex: 1;
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  #links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #links a {
+    padding: 8px 0;
+    border-bottom: 1px solid #334155;
+  }
+
+  #subnav {
+    gap: 12px;
+    padding: 8px;
+  }
+}
+/* ================= NAVBAR LINKS ================= */
+#links a {
+  text-decoration: none;
+  color: #e2e8f0;
+  font-size: 16px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+#links a:hover {
+  color: #22c55e; /* neon green */
+  background: rgba(34, 197, 94, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Underline Animation */
+#links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background: #22c55e;
+  transition: 0.3s;
+}
+
+#links a:hover::after {
+  width: 100%;
+}
+
+
+/* ================= SUBNAV LINKS ================= */
+#subnav a {
+  text-decoration: none;
+  color: #e2e8f0;
+  padding: 6px 12px;
+  border-radius: 6px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+#subnav a:hover {
+  color: #38bdf8; /* neon blue */
+  background: rgba(56, 189, 248, 0.15);
+  transform: scale(1.05);
+}
+
+/* Glow Effect */
+#subnav a:hover {
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
+}
+
+
+/* ================= BUTTON HOVER ================= */
+#search button {
+  background: #22c55e;
+  transition: all 0.3s ease;
+}
+
+#search button:hover {
+  background: #16a34a;
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.7);
+  transform: scale(1.05);
+}
+/*  -------------------------------------mobiles style ------------------------------------------- */
+/* Container */
+#mobile {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Desktop */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Card */
+#mobi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 15px;
+  height: 350px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+#mobi:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Image */
+#mobimg {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* Text */
+#mobi h4 {
+  color: #e2e8f0;
+  font-size: 16px;
+  text-align: center;
+}
+
+#mobi h2 {
+  color: #22c55e;
+  font-size: 18px;
+}
+
+/* Button */
+#mobi button {
+  background: #22c55e;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#mobi button:hover {
+  background: #16a34a;
+  transform: scale(1.05);
+}
+
+
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+  #mobile {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  #mobile {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #mobi {
+    height: auto;
+    padding: 12px;
+  }
+
+  #mobimg {
+    height: 150px;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+  #mobile {
+    grid-template-columns: 1fr;
+  }
+
+  #mobi {
+    width: 100%;
+  }
+}
+/* ------------------------------------------ computers style --------------------------------------- */
+/* Container */
+#computer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Desktop */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Card */
+#compu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 15px;
+  height: 350px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+#compu:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Image */
+#comimg {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+/* Image Hover Zoom */
+#comimg:hover {
+  transform: scale(1.1);
+}
+
+/* Text */
+#compu h4 {
+  color: #e2e8f0;
+  font-size: 16px;
+  text-align: center;
+}
+
+#compu h2 {
+  color: #22c55e;
+  font-size: 18px;
+}
+
+/* Button */
+#compu button {
+  background: #22c55e;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#compu button:hover {
+  background: #16a34a;
+  transform: scale(1.05);
+}
+
+
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+  #computer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  #computer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #compu {
+    height: auto;
+    padding: 12px;
+  }
+
+  #comimg {
+    height: 150px;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+  #computer {
+    grid-template-columns: 1fr;
+  }
+
+  #compu {
+    width: 100%;
+  }
+}
+/* ------------------------------------------ watch style --------------------------------------------- */
+/* Container */
+#watch {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Desktop */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Card */
+#watc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 15px;
+  height: 350px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+#watc:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Image */
+#watimg {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+/* Image Hover Zoom */
+#watimg:hover {
+  transform: scale(1.1);
+}
+
+/* Text */
+#watc h4 {
+  color: #e2e8f0;
+  font-size: 16px;
+  text-align: center;
+}
+
+#watc h2 {
+  color: #22c55e;
+  font-size: 18px;
+}
+
+/* Button */
+#watc button {
+  background: #22c55e;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#watc button:hover {
+  background: #16a34a;
+  transform: scale(1.05);
+}
+
+
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+  #watch {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  #watch {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #watc {
+    height: auto;
+    padding: 12px;
+  }
+
+  #watimg {
+    height: 150px;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+  #watch {
+    grid-template-columns: 1fr;
+  }
+
+  #watc {
+    width: 100%;
+  }
+}
+/* ---------------------------- h3 -------------------------------------- */    
+h3 {
+  background: linear-gradient(90deg, #4f5f79, #1e293b);
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  padding: 12px;
+  margin: 20px 0;
+  border-radius: 8px;
+  letter-spacing: 1px;
+  font-size: 22px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+/* ----------------------------------------------- speaker styles ------------------------------------------------ */
+/* Container */
+#speaker {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Desktop: 5 items */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Card */
+#speak {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 15px;
+  height: 350px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+#speak:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Image */
+#speakimg {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* Text */
+#speak h4 {
+  color: #e2e8f0;
+  font-size: 16px;
+  text-align: center;
+}
+
+#speak h2 {
+  color: #22c55e;
+  font-size: 18px;
+}
+
+/* Button */
+#speak button {
+  background: #22c55e;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#speak button:hover {
+  background: #16a34a;
+  transform: scale(1.05);
+}
+
+
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+  #speaker {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  #speaker {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #speak {
+    height: auto;
+    padding: 12px;
+  }
+
+  #speakimg {
+    height: 150px;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+  #speaker {
+    grid-template-columns: 1fr;
+  }
+
+  #speak {
+    width: 100%;
+  }
+}
+/* ----------------------------------------- ac style ------------------------------------------ */
+/* Container */
+#ac {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Desktop */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Card */
+#airc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 15px;
+  height: 350px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+#airc:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Image */
+#acimg {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+/* Image Hover Zoom */
+#acimg:hover {
+  transform: scale(1.1);
+}
+
+/* Text */
+#airc h4 {
+  color: #e2e8f0;
+  font-size: 16px;
+  text-align: center;
+}
+
+#airc h2 {
+  color: #22c55e;
+  font-size: 18px;
+}
+
+/* Button */
+#airc button {
+  background: #22c55e;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#airc button:hover {
+  background: #16a34a;
+  transform: scale(1.05);
+}
+
+
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+  #ac {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  #ac {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #airc {
+    height: auto;
+    padding: 12px;
+  }
+
+  #acimg {
+    height: 150px;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+  #ac {
+    grid-template-columns: 1fr;
+  }
+
+  #airc {
+    width: 100%;
+  }
+}
+/*------------------------------------------------mens------------------------------------------------------------*/
+/* Container */
+#men {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Desktop */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Card */
+#menc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 15px;
+  height: 360px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+#menc:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Image */
+#menimg {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+/* Image Hover Zoom */
+#menimg:hover {
+  transform: scale(1.1);
+}
+
+/* Text */
+#menc h4 {
+  color: #e2e8f0;
+  font-size: 16px;
+  text-align: center;
+}
+
+#menc h2 {
+  color: #22c55e;
+  font-size: 18px;
+}
+
+/* Button */
+#menc button {
+  background: #22c55e;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#menc button:hover {
+  background: #16a34a;
+  transform: scale(1.05);
+}
+
+
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+  #men {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  #men {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #menc {
+    height: auto;
+    padding: 12px;
+  }
+
+  #menimg {
+    height: 160px;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+  #men {
+    grid-template-columns: 1fr;
+  }
+
+  #menc {
+    width: 100%;
+  }
+}
+/*-------------------------------------------------furniture-------------------------------------------------*/
+#furni
+{
+     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+}
+/* Container */
+#furniture {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Card */
+.furni-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 15px;
+  height: 360px;
+  transition: 0.3s;
+}
+
+.furni-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Image */
+.furni-img {
+  width: 100%;
+  height: 180px;        /* ✅ control image size */
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* Text */
+.furni-card h4 {
+  color: #e2e8f0;
+  font-size: 16px;
+  text-align: center;
+}
+
+.furni-card h2 {
+  color: #22c55e;
+  font-size: 18px;
+}
+
+/* Button */
+.furni-card button {
+  background: #22c55e;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  #furniture {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  #furniture {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  #furniture {
+    grid-template-columns: 1fr;
+  }
+}
+/*----------------------------------------------------pages-------------------------------------------------------*/
+/* Container */
+#container {
+  display: flex;
+  margin-top: 10px; /* ✅ space for navbar */
+}
+
+/* ================= SIDEBAR ================= */
+#choices {
+  width: 20%;
+  height: calc(100vh - 70px); /* ✅ full height minus navbar */
+  border: 2px solid black;
+  position: sticky; /* ✅ FIXED ISSUE */
+  top: 70px; /* ✅ below navbar */
+  overflow-y: auto;
+  padding: 15px;
+  background: #1e293b;
+  color: white;
+}
+
+/* Checkbox items */
+#choices div {
+  margin-bottom: 10px;
+}
+
+#choices input {
+  margin-right: 8px;
+}
+
+/* ================= ITEMS ================= */
+#items {
+  width: 80%;
+  border: 2px solid black;
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Card */
+#items div {
+  background: #1e293b;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+#items div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Image */
+#items img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+}
+
+/* Text */
+#items h1 {
+  font-size: 16px;
+}
+
+#items h1:last-child {
+  color: #22c55e;
+}
+
+
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+  #items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  #container {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  #choices {
+    position: static; /* ✅ no overlap */
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  #items {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+  #items {
+    grid-template-columns: 1fr;
+  }
+}
+/* Main Wrapper */
+#sing {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px;
+  gap: 40px;
+  flex-wrap: wrap; /* ✅ helps responsiveness */
+}
+
+/* Image Section */
+#single {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image */
+#singleimg {
+  height: 400px;
+  width: 400px;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+/* Image Hover */
+#singleimg:hover {
+  transform: scale(1.05);
+}
+
+/* Details Section */
+#model {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+}
+
+/* Buttons */
+#butt {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+#butt button {
+  width: 48%;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#butt button:hover {
+  transform: scale(1.05);
+}
+
+
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+  #singleimg {
+    height: 300px;
+    width: 300px;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  #sing {
+    flex-direction: column; /* ✅ stack layout */
+    padding: 20px;
+  }
+
+  #singleimg {
+    height: 250px;
+    width: 250px;
+  }
+
+  #model {
+    align-items: center;
+    text-align: center;
+  }
+
+  #butt {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #butt button {
+    width: 100%;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+  #singleimg {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+
+/* ----------------------------last page-------------------------------------------------- */
+
+/* Main Footer */
+#footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 40px 20px 10px;
+  margin-top: 50px;
+}
+
+/* Container */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+}
+
+/* Sections */
+.footer-section h4 {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.footer-section p {
+  font-size: 13px;
+  margin: 6px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Hover */
+.footer-section p:hover {
+  color: #38bdf8;
+}
+
+/* Bottom */
+.footer-bottom {
+  border-top: 1px solid #334155;
+  margin-top: 20px;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  #footer {
+    text-align: center;
+  }
+}
+/* ---------------------------------------------contactus---------------------------------------------------*/
+/*contact us */
+
+/* Page Background */
+#contact-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: white;
+}
+
+/* Heading */
+#contact-page h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #38bdf8;
+  text-shadow: 0 0 10px rgba(56,189,248,0.7);
+}
+
+/* Layout */
+#contact-wrapper {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Contact Info */
+#contact-info {
+  flex: 1;
+  min-width: 250px;
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(56,189,248,0.2);
+}
+
+#contact-info h3 {
+  margin-bottom: 10px;
+}
+
+/* Form */
+#contact-form {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(34,197,94,0.2);
+}
+
+/* Inputs */
+#contact-form input,
+#contact-form textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+/* Button */
+#contact-form button {
+  background: #22c55e;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#contact-form button:hover {
+  background: #16a34a;
+  box-shadow: 0 0 12px rgba(34,197,94,0.6);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  #contact-wrapper {
+    flex-direction: column;
+  }
+}
+/* ----------------------------------------- aboutus ----------------------------------------------------------------- */
+
+/* Page Background */
+#about-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: white;
+}
+
+/* Heading */
+#about-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #38bdf8;
+  text-shadow: 0 0 10px rgba(56,189,248,0.7);
+}
+
+/* Banner */
+#about-banner img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 20px rgba(56,189,248,0.3);
+}
+
+/* Sections */
+#about-page section {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #1e293b;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(56,189,248,0.2);
+}
+
+/* Flex Section */
+#about-flex {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Images */
+#about-flex img {
+  width: 50%;
+  border-radius: 10px;
+}
+
+/* Text */
+#about-flex div {
+  width: 50%;
+}
+
+#about-page h3 {
+  color: #22c55e;
+  margin-bottom: 10px;
+}
+
+#about-page p {
+  line-height: 1.6;
+}
+
+/* Features */
+#about-features ul {
+  list-style: none;
+  padding: 0;
+}
+
+#about-features li {
+  margin: 8px 0;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  #about-flex {
+    flex-direction: column;
+  }
+
+  #about-flex img,
+  #about-flex div {
+    width: 100%;
+  }
+
+  #about-banner img {
+    height: 200px;
+  }
+}
+/*----------------------------------------------------------------------------*/
+
+#curimg
+{
+  height: 600px;
+  width: 500px;
+  margin-top: 10px;
+}
+
+/*---------------------------------add to cart-----------------------------------------------------------*/
+
+/* Main Cart Container */
+#cartdata {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  padding: 30px;
+  background: #0f172a;
+  min-height: 100vh;
+}
+
+/* Cart Item Card */
+#cartdata div {
+  background: #1e293b;
+  border-radius: 18px;
+  padding: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.15);
+}
+
+/* Hover Effect */
+#cartdata div:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+}
+
+/* Product Image */
+#cartdata img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 10px;
+}
+
+/* Product Title */
+#cartdata h1 {
+  font-size: 16px;
+  color: #e2e8f0;
+  margin: 12px 0;
+}
+
+/* Remove Button */
+.btn-danger {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  border: none;
+  padding: 10px 14px;
+  color: #fff;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+/* Button Hover */
+.btn-danger:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px #ff4b2b;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet View (2 items per row) */
+@media (max-width: 1024px) {
+  #cartdata {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile View (1 item per row) */
+@media (max-width: 600px) {
+  #cartdata {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 20px;
+  }
+
+  #cartdata img {
+    height: 150px;
+  }
+
+  #cartdata h1 {
+    font-size: 14px;
+  }
+}
+/*--------------------------------------signup---------------------------------------------*/
+
+/* Full Page */
+#auth-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+/* Box */
+#auth-box {
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 20px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+/* Title */
+#auth-box h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+#auth-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+/* Button */
+#auth-box button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #00f5ff, #00ff87);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#auth-box button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px cyan;
+}
+
+/* Toggle Text */
+#auth-box p {
+  margin-top: 15px;
+  color: #38bdf8;
+  cursor: pointer;
+}
+
+#auth-box p:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  #auth-box {
+    width: 90%;
+  }
+}

@@ -1,0 +1,1 @@
+# GitHub Push Plan Progress&#10;&#10;## Plan Steps:&#10;1. [ ] Stage all changes: `git add .`&#10;2. [ ] Commit initial changes&#10;3. [ ] Verify/add remote origin&#10;4. [ ] Push to main&#10;5. [ ] Edit package.json (name, repo, desc)&#10;6. [ ] Edit README.md (customize)&#10;7. [ ] Final commit & push&#10;8. [ ] Verify on GitHub&#10;&#10;Updated as steps complete.
