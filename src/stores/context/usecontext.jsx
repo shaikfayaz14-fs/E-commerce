@@ -1,26 +1,37 @@
-import { Children, createContext,useContext, useState } from "react"
-const cartcontext= createContext()
-export function CartProvider({children})
-{
-    const[cartitems,setcartitems]=useState([])
-    function Additems(val)
-    {
-        setcartitems([...cartitems,val])
-    }
-    function Remove(val)
-    {
-        let newdata=cartitems.filter((item)=>item.company!=val)
-        setcartitems(newdata)
-    }
-    return(
-        <div>
-            <cartcontext.Provider value={{cartitems,Additems,Remove}}>
-                {children}
-            </cartcontext.Provider>
-        </div>
+import { createContext, useContext, useMemo, useState } from "react"
+
+const cartContext = createContext(null)
+
+export function CartProvider({ children }) {
+  const [cartitems, setCartitems] = useState([])
+
+  function Additems(product) {
+    setCartitems((currentItems) => {
+      const alreadyInCart = currentItems.some((item) => item.id === product.id)
+      return alreadyInCart ? currentItems : [...currentItems, product]
+    })
+  }
+
+  function Remove(productId) {
+    setCartitems((currentItems) =>
+      currentItems.filter((item) => item.id !== productId),
     )
+  }
+
+  const value = useMemo(
+    () => ({ cartitems, Additems, Remove }),
+    [cartitems],
+  )
+
+  return <cartContext.Provider value={value}>{children}</cartContext.Provider>
 }
-export const usecart=()=>
-{
-    return useContext(cartcontext)
-} 
+
+export function usecart() {
+  const context = useContext(cartContext)
+
+  if (!context) {
+    throw new Error("usecart must be used inside a CartProvider")
+  }
+
+  return context
+}
