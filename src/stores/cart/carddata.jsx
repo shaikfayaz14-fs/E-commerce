@@ -1,31 +1,36 @@
 import Navbar from "../components/navbar"
 import { usecart } from "../context/usecontext"
 
-function Cartdata()
-{
-    let {cartitems,Remove}=usecart()
-    console.log(cartitems)
-    
-    return(
-        <div>
-            <Navbar/>
-            <div id="cartdata">
-                {
-                    cartitems.map((item)=>
-                    {
-                        return(
-                            <div>
-                                
-                                <img src={item.image}/>
-                                
-                                <h1>{item.company}</h1>
-                                <button type="button" class="btn btn-danger" onClick={()=>Remove(item.company)}>Remove</button>
-                            </div>
-                        )
-                    })
-                }
-            </div>
-        </div>
-    )
+function Cartdata() {
+  const { cartitems, Remove } = usecart()
+
+  return (
+    <div>
+      <Navbar />
+      <main id="cartdata" aria-labelledby="cart-title">
+        <h1 id="cart-title">Your cart</h1>
+        {cartitems.length === 0 ? (
+          <p>Your cart is empty.</p>
+        ) : (
+          cartitems.map((item) => (
+            <article key={item.id}>
+              <img src={item.image} alt={item.model || item.company || "Product"} />
+              <h2>{item.company || item.brand || item.model}</h2>
+              {item.model && <p>{item.model}</p>}
+              <p>{item.price}</p>
+              <button
+                type="button"
+                className="btn btn-danger"
+                onClick={() => Remove(item.id)}
+              >
+                Remove
+              </button>
+            </article>
+          ))
+        )}
+      </main>
+    </div>
+  )
 }
+
 export default Cartdata
