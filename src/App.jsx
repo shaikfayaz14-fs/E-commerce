@@ -26,15 +26,15 @@ import Womensingle from "./stores/single pages/womensingle"
 import Mobilespage from "./stores/pages/mobilespage"
 import About from "./stores/pages/aboutus"
 import Contact from "./stores/pages/contactus"
-import SearchPage from "./stores/pages/searchpage"
+import SearchPage from "./stores/pages/SearchPage"
 import Cartdata from "./stores/cart/carddata"
 import Auth from "./stores/pages/Auth"
 function App() {
-  
+   
 
   return (
    <div>
-   
+    
     <Routes>
       <Route path="/"element={<Landingpage/>}/>
       <Route path="/mobiles"element={<Mobilespage/>}/>
